@@ -109,7 +109,7 @@ section .container-fluid {
 }
 
 .mg-bt {
-    padding-bottom: 15em;
+    padding-bottom: 5em;
 }
 
 .pd-top {
@@ -144,7 +144,6 @@ section .container-fluid {
 }
 
 .row .btn-primary, #moreInf .row .btn-primary:hover {
-    color: #337ab7;
     padding: 0.3em 1em;
     font-size: 1.25em;
     background: none!important;
@@ -202,9 +201,21 @@ footer.sizeDefined {
     height: 10vh;
 }
 
+small span {
+    font-size: 1.5em;
+}
+
 @media only screen and (max-width: 600px) {
   nav {
     text-align: center!important;
+  }
+
+  nav ul {
+      margin: .5em 0em!important;
+  }
+
+  .mbl-mg {
+      margin: 1em 0em;
   }
 	
   .wlog {
