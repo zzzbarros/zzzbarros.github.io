@@ -114,7 +114,7 @@ section .container-fluid {
 
 .pd-top {
     padding-top: 1em;
-    text-aling: center;
+    text-aling: left;
 }
 
 .row img {
@@ -200,6 +200,16 @@ footer {
 
 footer.sizeDefined {
     height: 10vh;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    text-align: center!important;
+  }
+	
+  footer {
+   height: auto!important;
+  }
 }
 
 
