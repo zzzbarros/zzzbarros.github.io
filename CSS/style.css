@@ -114,6 +114,7 @@ section .container-fluid {
 
 .pd-top {
     padding-top: 1em;
+    text-aling: center;
 }
 
 .row img {
