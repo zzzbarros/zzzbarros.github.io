@@ -207,6 +207,10 @@ footer.sizeDefined {
     text-align: center!important;
   }
 	
+  .wlog {
+    text-align:center;
+  }
+	  
   footer {
    height: auto!important;
   }
