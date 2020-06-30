@@ -1,151 +1,118 @@
 <!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>DoubleBlog - Notícias</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <script type="text/javascript" src="./JavaScript/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,700;0,800;1,200;1,300;1,400;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Projeto AS</title>
 </head>
 <body>
+    
+    <header id="log" class="container-fluid">
+        <div class="container fadeIn">
+            <h1>Olá.</h1>
+            <h2>Insira seu nome para prosseguir.</h2>
 
-    <header>
-        <h1>double<span>Blog</span></h1>
-        <nav>
-            <a>Ouça a Gaúcha</a>
-            <a>Coronavírus</a>
-            <a class="act">Notícias</a>
-            <a>Grêmio</a>
-            <a>Porto Alegre</a>
-        </nav>
+            <form class="col-md-8 offset-md-2" action="#">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="usr" placeholder="Username" onkeypress="return onlynumber()">
+                </div>
+                <a href="#a1">
+                    <input type="button" value="Avançar" onclick="verif()" class="btn btn-primary">
+                </a>    
+            </form>
+        </div>
     </header>
 
-    <section>
+    <nav id="navbar" class="col-md-12 fadeIn2 dpsoff">
+        <p class="col-md-3 col-12 hmg-none">DoubleZ<span>Dev</span></p>
+        <ul class="nav nav-tabs col-md-4 col-12 offset-md-2" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">Sobre o Dev</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu1">Contato</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu2">Extra</a>
+            </li>
+        </ul>
+        <p class="col-md-3 col-12 fadeIn2 wlog"><span class="glyphicon">&#xe008;</span> Bem-vindo <span id="span-nome"></span></p>
+    </nav>
 
-        <article class="master"><a>
-            <div class="article-img">
-                <img src="https://www.valuehost.com.br/blog/wp-content/uploads/2015/03/loremipsum.jpg">
-            </div>
-            <div class="article-text">
-                <h4>What is Lorem Ipsum?</h4>
-                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</h2>
-            </div>
-        </a></article>
 
-        <article><a>
-            <div class="article-text">
-                <h4>What is Lorem Ipsum?</h4>
-                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h2>
-            </div>
-            <div class="article-img">
-                <img src="https://sanctuaryinhim.org/wp-content/uploads/2016/11/Lorem-Ipsum-2.jpg">
-            </div>
-        </a></article>
+    <section id="homePage" class="container-fluid dpsoff"><a name="a1"></a>   
+        <div class="tab-content fadeIn3">
+            <div id="home" class="container-fluid tab-pane active"><br>
+                <div class="row justify-content-start fadeIn3 mg-bt">
+                    <div class="col-md-4 col-12 offset-2">
+                        <img class="img-fluid" src="imagens/itsme.jpg">
+                    </div>
+                    <div class="col-md-4 col-12 pd-top">
+                        <span>Estudante</span>
+                        <h1>José Barros</h1>
+                        <p>Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.Duis posuere, quam non imperdiet egestas, eros enim mattis mauris, in posuere lacus arcu quis felis. Etiam interdum erat non enim venenatis fermentum.</p>
+                        <a href="#moreInfo">
+                            <button class="btn btn-primary" onclick="moreInfo()">mais</button>
+                        </a>
+                    </div><a name="moreInfo"></a>
+                </div>
+                <hr>
+                <div id="moreInf" class="row justify-content-start dpsoff fadeIn2">
+                    <h2 class="col-md-12 col-12">Siga-me nas redes sociais<span>.</span></h2>
+                    <div class="container fadeIn4">
+                        <div class="row">
+                            <div class="col-md-4 col-12">
+                                <p><i class="fa fa-instagram"></i></p>
+                                <button class="btn btn-primary">@zzzbarros</button> 
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <p><i class="fa fa-twitter"></i></p>
+                                <button class="btn btn-primary">@zzzbarros</button>
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <p><i class="fa fa-github"></i></p>
+                                <button class="btn btn-primary">@zzzbarros</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <article><a>
-            <div class="article-text">
-                <h4>What is Lorem Ipsum?</h4>
-                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h2>
             </div>
-            <div class="article-img">
-                <img src="https://sanctuaryinhim.org/wp-content/uploads/2016/11/Lorem-Ipsum-2.jpg">
-            </div>
-        </a></article>
 
-        <article><a>
-            <div class="article-text">
-                <h4>What is Lorem Ipsum?</h4>
-                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h2>
+            <div id="menu1" class="container tab-pane fade"><br>
+              <h3>Menu 1</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-            <div class="article-img">
-                <img src="https://sanctuaryinhim.org/wp-content/uploads/2016/11/Lorem-Ipsum-2.jpg">
-            </div>
-        </a></article>
 
+            <div id="menu2" class="container tab-pane fade"><br>
+              <h3>Menu 2</h3>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+
+          </div>
+        </div>
     </section>
 
-    <aside>
-
-        <article class="columnist"><a>
-            <div class="article-text">
-                <h2>"Lorem Ipsum is simply dummy text of the printing and typesetting industry."</h2>
-                <h4>José Barros <span>| Colunista</span></h4>
-            </div>
-            <div class="article-img">
-                <img src="https://pbs.twimg.com/profile_images/1239915243419193345/MxEuUU-Z_400x400.jpg">
-            </div>
-        </a></article>
-        
-        <article class="columnist"><a>
-            <div class="article-text">
-                <h2>"Lorem Ipsum is simply dummy text of the printing and typesetting industry."</h2>
-                <h4>José Barros <span>| Colunista</span></h4>
-            </div>
-            <div class="article-img">
-                <img src="https://pbs.twimg.com/profile_images/1239915243419193345/MxEuUU-Z_400x400.jpg">
-            </div>
-        </a></article>
-
-        <article><a>
-            <div class="article-text">
-              <h4>What is Lorem Ipsum?</h4>
-              <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
-             </div>
-            <div class="article-img">
-                <img src="https://sanctuaryinhim.org/wp-content/uploads/2016/11/Lorem-Ipsum-2.jpg">
-            </div>
-        </a></article>
-
-        <article><a>
-            <div class="article-text">
-              <h4>What is Lorem Ipsum?</h4>
-              <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
-            </div>
-            <div class="article-img">
-                <img src="https://sanctuaryinhim.org/wp-content/uploads/2016/11/Lorem-Ipsum-2.jpg">
-            </div>
-        </a></article>
-
-        <article class="aside-master"><a>
-            <div class="article-text">
-                <h4>#WhatisLoremIpsum?</h4>
-                <h2>"Lorem Ipsum is simply dummy text of the printing and typesetting industry."</h2>
-            </div>
-            <div class="article-img">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ0eT5A28-MhrOMuYGB8T_fuOd_VYIUzcRGWNyk-aQdwhm_mavI&usqp=CAU">
-            </div>
-        </a></article>
-
-
-    </aside>
-
-    <footer>
-        <div class="flogo">
-            <h1>double<span>Blog</span></h1>
-        </div>
-        
-        <span>No DoubleBlog, você encontra as últimas notícias de Porto Alegre e do RS, colunistas exclusivos, esportes, Grêmio, Inter, economia, política, cultura e mais.</span>
-
-        <div class="fcontact">
-            <div class="contact-text">
-                <h4>DoubleBlog</h4>
-                <p>(51) xxxxx-xxxx</p>
-            </div>
-            <i class="fa fa-whatsapp"></i>
-            <div class="contact-text">
-                <h4>José Barros</h4>
-                <p>(51) 99557-2714</p>
-            </div>
-            <i class="fa fa-whatsapp"></i>
-        </div>
-
-        <div class="fmidia">
-            <a href="https://www.instagram.com/zzzbarros/"><i class="fa fa-instagram"></i></a>
-           <a href="https://twitter.com/ZzzBarros"><i class="fa fa-twitter"></i></a> 
-        </div>
-
+    <footer id="rdp" class="sizeDefined">
+        <p>DoubleZ<span>Dev</span> | <small>Todos os direitos reservados<span>.</span></small></p>
     </footer>
+
+    
+
+
+
+
 </body>
 </html>
