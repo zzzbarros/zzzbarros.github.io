@@ -8,7 +8,7 @@ body {
 
 header {
     background: #f5f5f5!important;
-    height: calc(100vh - 8vh);
+    height: calc(100vh - 10vh);
 }
 
 
@@ -27,7 +27,9 @@ header .btn-primary:hover {
     background-color: #007ced!important;
     border-color: #007ced!important;
     box-shadow: 0 0 0 0.2rem rgba(31, 168, 209, 0.712)!important;
-    outline: none!important;
+}
+a:focus, .btn-primary.focus, .btn-primary:focus {
+	outline: none!important;	
 }
 
 nav {
@@ -196,7 +198,7 @@ footer {
 }
 
 footer.sizeDefined {
-    height: 8vh;
+    height: 10vh;
 }
 
 
