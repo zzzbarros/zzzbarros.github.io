@@ -70,4 +70,10 @@ function onlyletter(evt) {
        theEvent.returnValue = false;
        if(theEvent.preventDefault) theEvent.preventDefault();
     }
+    var usr = document.getElementById('log-name-display')
+    if (document.getElementById('usr').value == '') {
+        usr.classList.remove('dpsoff')
+    } else {
+        usr.classList.add('dpsoff')
+    }    
  }
