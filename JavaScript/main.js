@@ -1,18 +1,29 @@
 function verif() {
     var nome = document.getElementById('usr').value
     console.log(nome)
-    
     var nav = document.getElementById('navbar')
     var idloggin = document.getElementById('log')
     var home = document.getElementById('homePage')
-    nav.classList.remove('dpsoff')
-    idloggin.classList.add('dpsoff')
-    home.classList.remove('dpsoff')
     var rdp = document.getElementById('rdp')
+    var alertSpan = document.getElementById('log-name-display')
+    
+   
+    
     rdp.classList.remove('sizeDefined')
-
-    document.getElementById("span-nome").innerHTML = nome + "."
-    document.getElementById("span-nome-2").innerHTML = nome 
+   
+    if (document.getElementById('usr').value == '') {
+        alertSpan.classList.remove('dpsoff')
+    } 
+    else {
+        alertSpan.classList.add('dpsoff')
+        nav.classList.remove('dpsoff')
+        idloggin.classList.add('dpsoff')
+        home.classList.remove('dpsoff')
+        document.getElementById("span-nome").innerHTML = nome + "."
+        document.getElementById("span-nome-2").innerHTML = nome 
+    }  
+    
+    
 }
 
 function moreInfo() {
@@ -69,11 +80,5 @@ function onlyletter(evt) {
     if( !regex.test(key) ) {
        theEvent.returnValue = false;
        if(theEvent.preventDefault) theEvent.preventDefault();
-    }
-    var usr = document.getElementById('log-name-display')
-    if (document.getElementById('usr').value == '') {
-        usr.classList.remove('dpsoff')
-    } else {
-        usr.classList.add('dpsoff')
-    }    
+    }  
  }
