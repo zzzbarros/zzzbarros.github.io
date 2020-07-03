@@ -15,9 +15,11 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>  
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,700;0,800;1,200;1,300;1,400;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Projeto AS</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Projeto AS - DoublezDev</title>
 </head>
 <body>
+
     <header id="log" class="container-fluid">
         <div class="container fadeIn">
             <h1>Olá.</h1>
@@ -25,7 +27,7 @@
 
             <form class="col-md-8 offset-md-2" action="#">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="usr" placeholder="Username" onkeypress="return onlynumber()">
+                    <input type="text" class="form-control" id="usr" placeholder="Username" onkeypress="return onlyletter()">
                 </div>
                 <a href="#a1">
                     <input type="button" value="Avançar" onclick="verif()" class="btn btn-primary">
@@ -41,19 +43,18 @@
                 <a class="nav-link active" data-toggle="tab" href="#home">Sobre o Dev</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#menu1">Contato</a>
+                <a class="nav-link" data-toggle="tab" href="#contact">Contato</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#menu2">Extra</a>
+                <a class="nav-link" data-toggle="tab" href="#extra">Extra</a>
             </li>
         </ul>
         <p class="col-md-3 col-12 fadeIn2 wlog"><span class="glyphicon">&#xe008;</span> Bem-vindo <span id="span-nome"></span></p>
     </nav>
 
-
     <section id="homePage" class="container-fluid dpsoff"><a name="a1"></a>   
         <div class="tab-content fadeIn3">
-            <div id="home" class="container-fluid tab-pane active"><br>
+            <div id="home" class="container-fluid tab-pane active">
                 <div class="container pd-top">
                     <div class="row justify-content-start fadeIn3 mg-bt">
                         <div class="col-md-6 col-8 mbl-mg">
@@ -76,15 +77,15 @@
                         <div class="row">
                             <div class="col-md-4 col-12">
                                 <p><i class="fa fa-instagram"></i></p>
-                                <button class="btn btn-primary">Instagram</button> 
+                                <button class="btn btn-primary"><a href="https://www.instagram.com/zzzbarros/">Instagram</a></button> 
                             </div>
                             <div class="col-md-4 col-12">
                                 <p><i class="fa fa-twitter"></i></p>
-                                <button class="btn btn-primary">Twitter</button>
+                                <button class="btn btn-primary"><a href="https://www.twitter.com/zzzbarros/">Twitter</a></button>
                             </div>
                             <div class="col-md-4 col-12">
                                 <p><i class="fa fa-github"></i></p>
-                                <button class="btn btn-primary">GitHub</button>
+                                <button class="btn btn-primary"><a href="https://www.github.com/zzzbarros/">GitHub</a></button>
                             </div>
                         </div>
                     </div>
@@ -92,14 +93,72 @@
 
             </div>
 
-            <div id="menu1" class="container tab-pane fade"><br>
-              <h3>Menu 1</h3>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
+            <div id="contact" class="container-fluid tab-pane fade">
+                <div class="container">
+                    <p id="alert-sucess-email">Email enviado com sucesso.</p>
+                </div>
+                <div class="container fadeIn3">
+                    <p>Contate-me <span id="span-nome-2"></span>.</p>
+                    <h1>Como posso ajuda-lo?</h1>
+                    <div class="container">
+                        <div class="row col-md-6 col-12">
+                            <div class="card-body">
+                                <i class="material-icons col-md-4">&#xe32c;</i>
+                                <h3 class="col-md-8">| 51 998180973</h3>
+                                <p class="card-text col-md-6">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-body">
+                                <i class="material-icons col-md-4">&#xe0c8;</i>
+                                <h3 class="col-md-8">| Arroio do Sal - RS</h3>
+                                <p class="card-text col-md-6">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <div class="card-body">
+                                <i class="material-icons col-md-4">&#xe0e1;</i>
+                                <h3 class="col-md-8">| hello@example.com</h3>
+                                <p class="card-text col-md-6">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <form id="contact_form" class="contact-form col-md-6 col-12" action="#">
+                            <div class="controls">
+                                <div class="form-group form-group-with-icon">
+                                    <label for="form_name">Nome</label>
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Nome completo" onkeypress="onlyletter()">
+                                    <div class="form-control-border"></div>
+                                    <div id="name-display" class="help-block with-errors dpsoff">Nome inválido.</div>
+                                </div>
 
-            <div id="menu2" class="container tab-pane fade"><br>
-              <h3>Menu 2</h3>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                <div class="form-group form-group-with-icon">
+                                    <label for="form_email">Email</label>
+                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="email@doublez.com">
+                                    <div class="form-control-border"></div>
+                                    <div id="email-display" class="help-block with-errors dpsoff">Email inválido.</div>
+                                </div>
+
+                                <div class="form-group form-group-with-icon">
+                                    <label for="form_subject">Assunto</label>
+                                    <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Assunto">
+                                    <div class="form-control-border"></div>
+                                    <div id="subject-display" class="help-block with-errors dpsoff">Assunto inválido.</div>
+                                </div>
+
+                                <div class="form-group form-group-with-icon">
+                                    <label for="form_menssage">Mensagem</label>
+                                    <textarea id="form_message" name="message" class="form-control" placeholder="Mensagem" rows="7"></textarea>
+                                    <div class="form-control-border"></div>
+                                    <div id="msg-display" class="help-block with-errors dpsoff">Por favor, escreva uma mensagem.</div>
+                                </div>
+                                <input type="button" class="btn btn-primary" value="Enviar" onclick="validmail()">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="extra" class="container-fluid tab-pane fade">
+                <div class="container co-md-12 fadeIn4">
+                    <h1><i class='fas fa-battery-half'></i> | Loading</h1>
+                    <hr>
+                    <h2>DoubleZ<span>Dev</span></h2>
+                </div>
             </div>
 
           </div>
@@ -109,11 +168,6 @@
     <footer id="rdp" class="sizeDefined">
         <p>DoubleZ<span>Dev</span> | <small>Todos os direitos reservados<span>.</span></small></p>
     </footer>
-
-    
-
-
-
 
 </body>
 </html>
