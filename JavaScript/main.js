@@ -7,16 +7,15 @@ function verif() {
     var rdp = document.getElementById('rdp')
     var alertSpan = document.getElementById('log-name-display')
    
-    if (document.getElementById('usr').value == null) {
-        alertSpan.classList.remove('dpsoff')
+    if (document.getElementById('usr').value != '') {
+        nav.classList.remove('dpsoff')
+        idloggin.classList.add('dpsoff')
+        home.classList.remove('dpsoff')
+        rdp.classList.remove('sizeDefined')
+        document.getElementById("span-nome").innerHTML = nome + "."
+        document.getElementById("span-nome-2").innerHTML = nome 
     } else {
-            alertSpan.classList.add('dpsoff')
-            nav.classList.remove('dpsoff')
-            idloggin.classList.add('dpsoff')
-            home.classList.remove('dpsoff')
-            rdp.classList.remove('sizeDefined')
-            document.getElementById("span-nome").innerHTML = nome + "."
-            document.getElementById("span-nome-2").innerHTML = nome 
+        alertSpan.classList.remove('dpsoff')
         }  
     
     
